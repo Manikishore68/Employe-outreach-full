@@ -1,0 +1,45 @@
+
+section {
+  background-color: #534f4f;
+}
+.activity-head h5 {
+  color: white;
+  float: right;
+  font-weight: bold;
+}
+
+.activity-head img {
+  width: 150px;
+  height: 30px;
+}
+
+.activity-body {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.activity-button input {
+  display: block;
+  border: none;
+  padding: 14px 77px;
+  text-transform: initial;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.activity-add i {
+  font-size: 14px;
+}
+
+.activity-save input{
+  border: none;
+  text-transform: initial;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 10px 40px;
+}
+
+.activity-table tr th {
+  font-size: 16px;
+  font-weight: 700;
+}

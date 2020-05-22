@@ -1,0 +1,138 @@
+<section class="m-auto">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 m-auto">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <div class="row">
+              <div class="col-xs-3">
+                <img src="https://www.mphasis.com/mphasis/ebooks/2018DigitalAnnualReport/images/Logo.png" height="50px" width="150px">
+              </div>
+              <div class="col-xs-6 px-3">
+                <h4 class="font-weight-bold mt-1">Employee Outreach</h4>
+              </div>
+              <div class="col-xs-3">
+                <i class="fa fa-home fa-2x px-3 " routerLink="/"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-header bg-light ">
+
+            <div class="row">
+              <img src="https://www.searchpng.com/wp-content/uploads/2019/02/Deafult-Profile-Pitcher.png" height="100px" width="100px" class="">
+
+              <div class="row ml-5 mt-4">
+                <div class="col">
+                  <h4 class="text-dark text-center font-weight-bold ">Mani Kishore C </h4>
+                  <h5 class="text-danger text-center font-weight-bold ">{{currentDate}}</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <form>
+                  <div class="row m-auto">
+                    <h6 class=" font-weight-bold p-2 " style="color: #0d47a1" >1) What is your primary location of work? </h6>
+                    <span class="text-danger ml-5 mt-1">&#42;</span>
+                  </div>
+                  <select class="form-control form-control-md">
+                    <option>select</option>
+                    <option *ngFor="let location of primaryLocation" value="{{location}}">{{location}}</option>
+                  </select>
+                  <div class="row p-2 m-auto">
+                    <span class="text-danger  ">if you wish to notify your/family status for any help from mphasis - please answser your Q# 2&3 while starting your day. </span>
+                  </div>
+                  <h6 class="p-3 font-weight-bold " style="color: #0d47a1">2)How are you feeling today?</h6>
+                  <select class="form-control form-control-md">
+                    <option>select</option>
+                    <option *ngFor="let family of familyFeeling" value="{{family}}">{{family}}</option>
+                  </select>
+                  <h6 class= "p-3 font-weight-bold " style="color: #0d47a1">3) how is your family feeling today?</h6>
+                  <select class="form-control form-control-md">
+                    <option>Good</option>
+                    <option *ngFor="let family of familyFeeling" value="{{family}}">{{family}}</option>
+                  </select>
+                  <div class="row m-auto">
+                    <h6 class="p-3 font-weight-bold " style="color: #0d47a1">4) where are you working from today</h6>
+                    <span class="text-danger ml-5 mt-3">&#42;</span>
+                  </div>
+                  <select class="form-control form-control-md">
+                    <option>Working from home</option>
+                    <option *ngFor="let location of primaryLocation" value="{{location}}">{{location}}</option>
+                  </select>
+                  <div class="row m-auto">
+                    <h6 class="p-3 font-weight-bold " style="color: #0d47a1">5) are you enabled for WFH?</h6>
+                    <span class="text-danger ml-5 mt-3">&#42;</span>
+                  </div>
+                  <select class="form-control form-control-md">
+                    <option>select</option>
+                    <option *ngFor="let enabled of wfh" value="{{enabled}}">{{enabled}}</option>
+                  </select>
+                </form>
+                <p class="p-3 font-weight-bold " style="color: #0d47a1">For IT related issue please <a class="" href="#">Ease+Ticket</a> for faster resolution</p>
+                <div class="row align-items-end">
+                  <!--                  <button class="btn" data-toggle="modal" data-target="#myModal" >start your day </button>-->
+                  <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#openModal">
+                    start your day
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-primary">
+            <div class="row">
+              <div class="col">
+                <h6 class="text-white">&copy; Mphasis 2020-The Next Applied</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--<div id="openModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="openModalLabel" style="display: none;" aria-hidden="true">-->
+<!--  <div class="modal-dialog modal-dialog-centered" role="document">-->
+<!--    <div class="modal-content">-->
+
+<!--      <div class="popup">-->
+
+<!--        </div>-->
+<!--        -->
+<!--      </div>-->
+
+<!--    </div>-->
+<!--  </div>-->
+
+
+<!-- Button trigger modal -->
+<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">-->
+<!--  Launch static backdrop modal-->
+<!--</button>-->
+
+<!-- Modal -->
+<div class="modal fade" id="openModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #0d47a1">
+        <h5 class="modal-title"  id="staticBackdropLabel"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="color:#0d47a1">
+        Please check your response before you Start your Day.this data cannot be changed for the day.The data collated will help support team to reach out just in case help/support is required.click yes to continue or no to review response
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" routerLink="/activity-timer">Yes</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
